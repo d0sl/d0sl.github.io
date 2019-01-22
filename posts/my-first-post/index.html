@@ -21,7 +21,32 @@
 </header>
 
 <div class="content-container">
-<main><h1>My First Post</h1><div class="edit-meta">Last updated on 22 Jan 2019 / Published on 22 Jan 2019<br></div><nav class="pagination"><a class="nav nav-prev" href="/posts/" title="Posts"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Posts</a>
+<main><h1>My First Post</h1>
+
+<h1 id="toc_0">Это первый пост из целого ряда хитроумных</h1>
+
+<h2 id="bat-d0s-github-io">Пример .bat файла, который обновляет сайт d0s.github.io</h2>
+
+<pre><code class="language-bash">echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+
+rem Build the project. if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
+hugo -t techdoc -c content -b &quot;https://d0sl.github.io&quot;
+
+rem Go To Public folder
+cd public
+rem Add changes to git.
+git add .
+
+rem Commit changes.
+git commit -m &quot;Rebuilding doc-site&quot;
+
+rem Push source and build repos.
+git push origin master
+
+rem Come Back up to the Project Root
+cd ..
+</code></pre>
+<div class="edit-meta">Last updated on 22 Jan 2019 / Published on 22 Jan 2019<br></div><nav class="pagination"><a class="nav nav-prev" href="/posts/" title="Posts"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Posts</a>
 
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
