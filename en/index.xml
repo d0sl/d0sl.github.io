@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learn D0SL Delta Zero Semantic Language on Documentation for D0SL Delta Zero Semantic Language</title>
+    <link>https://d0sl.github.io/en/</link>
+    <description>Recent content in Learn D0SL Delta Zero Semantic Language on Documentation for D0SL Delta Zero Semantic Language</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://d0sl.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Credits</title>
+      <link>https://d0sl.github.io/en/credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://d0sl.github.io/en/credits/</guid>
+      <description> Contributors Thanks to them  for making Open Source Software a better place !
+.ghContributors{display:flex;flex-flow: wrap;align-content: flex-start}.ghContributors  div{width: 50% ;display: inline-flex;margin-bottom: 5px;}.ghContributors  div label{padding-left: 4px ;}.ghContributors  div span{font-size: x-small;padding-left: 4px ;}@kuruhuru20 commits@vitgum1 commits </description>
+    </item>
+    
+  </channel>
+</rss>
