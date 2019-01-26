@@ -3,28 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/en/basics/</loc>
-  </url>
-  
-  <url>
-    <loc>/en/basics/requirements/</loc>
-  </url>
-  
-  <url>
-    <loc>/en/basics/installation/</loc>
-  </url>
-  
-  <url>
-    <loc>/en/basics/configuration/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/en/basics/style-customization/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/categories/</loc>
     <priority>0</priority>
     <xhtml:link
