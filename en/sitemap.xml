@@ -3,72 +3,72 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://d0sl.github.io/en/basics/</loc>
+    <loc>/en/basics/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/basics/requirements/</loc>
+    <loc>/en/basics/requirements/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/basics/installation/</loc>
+    <loc>/en/basics/installation/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/basics/configuration/</loc>
+    <loc>/en/basics/configuration/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/basics/style-customization/</loc>
+    <loc>/en/basics/style-customization/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/categories/</loc>
+    <loc>/en/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://d0sl.github.io/ru/categories/"
+                href="/ru/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://d0sl.github.io/en/categories/"
+                href="/en/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/credits/</loc>
+    <loc>/en/credits/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/</loc>
+    <loc>/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://d0sl.github.io/ru/"
+                href="/ru/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://d0sl.github.io/en/"
+                href="/en/"
                 />
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/tags/</loc>
+    <loc>/en/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://d0sl.github.io/ru/tags/"
+                href="/ru/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://d0sl.github.io/en/tags/"
+                href="/en/tags/"
                 />
   </url>
   

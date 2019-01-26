@@ -3,46 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://d0sl.github.io/ru/categories/</loc>
+    <loc>/ru/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://d0sl.github.io/en/categories/"
+                href="/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://d0sl.github.io/ru/categories/"
+                href="/ru/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/ru/tags/</loc>
+    <loc>/ru/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://d0sl.github.io/en/tags/"
+                href="/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://d0sl.github.io/ru/tags/"
+                href="/ru/tags/"
                 />
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/ru/</loc>
+    <loc>/ru/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://d0sl.github.io/en/"
+                href="/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://d0sl.github.io/ru/"
+                href="/ru/"
                 />
   </url>
   
