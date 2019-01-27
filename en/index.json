@@ -11,7 +11,14 @@
 	"title": "Requirements",
 	"tags": [],
 	"description": "",
-	"content": "So, our main goal is to give a person the opportunity to describe logical rules in an understandable language. We call it D0SL or Delta Zero Semantic Language.\nFor this, we should to implement the language, as well as provide a convenient editor (or IDE Integrated Development Environment) that would allow to create D0SL documents and even immediately run.\nThere are various ways to reach this, but we choosed as a bases the powerfull Jetbrains MPS (Meta Programming System).\nYou should preinstall it from here\n\rWe choose MPS because:\n  MPS IDE is very similar to Intelliji Idea, PyCharm and other Jetbrains products. MPS helps to create powerful DSL (domain specific languages) and helps to create their powerful extensions.\n With MPS we can build plugins of D0SL Language for Intelliji Idea\n We were able to develop a technology that does not depend on the MPS and can be used separately. But we see no reason to abandon the convenience of the MPS where it is possible.   "
+	"content": "So, our main goal is to give a person the opportunity to describe logical rules in an understandable language. We call it D0SL or Delta Zero Semantic Language.\nFor this, we should to implement the language, as well as provide a convenient editor (or IDE Integrated Development Environment) that would allow to create D0SL documents and even immediately run.\nThere are various ways to reach this, but we chose as a bases the powerfull Jetbrains MPS (Meta Programming System).\nYou should preinstall it from here\n\rWe choose MPS because:\n  MPS IDE is very similar to Intelliji Idea, PyCharm and other Jetbrains products. MPS helps to create powerful DSL (domain specific languages) and helps to create their powerful extensions.\n With MPS we can build plugins of D0SL Language for Intelliji Idea\n We were able to develop a technology that does not depend on the MPS and can be used separately. But we see no reason to abandon the convenience of the MPS where it is possible.   "
+},
+{
+	"uri": "/en/quick/installation/",
+	"title": "Installation",
+	"tags": [],
+	"description": "",
+	"content": " Install Jetbrains Meta Programming System (MPS) https://www.jetbrains.com/mps/ Clone the repo: git clone https://github.com/kirikprotocol/examples-d0sl In MPS install d0sl plugin from file d0sl_plugin*.zip (choose load plugin from disk option)  Open the project in MPS by choosing the directory cloned (e.g. examples-d0sl directory) Rebuild the project  "
 },
 {
 	"uri": "/en/categories/",

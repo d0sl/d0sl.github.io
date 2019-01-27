@@ -11,6 +11,10 @@
   </url>
   
   <url>
+    <loc>/en/quick/installation/</loc>
+  </url>
+  
+  <url>
     <loc>/en/categories/</loc>
     <priority>0</priority>
     <xhtml:link
