@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/en/quick/chess/sample/</loc>
+  </url>
+  
+  <url>
     <loc>/en/quick/</loc>
   </url>
   
@@ -12,6 +16,11 @@
   
   <url>
     <loc>/en/quick/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/quick/chess/</loc>
+    <lastmod>2019-02-01T14:53:57+07:00</lastmod>
   </url>
   
   <url>

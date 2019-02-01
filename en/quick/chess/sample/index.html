@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Installation :: D0SL Semantic Platform</title>
+    <title>Project details :: D0SL Semantic Platform</title>
 
     
     <link href="/css/nucleus.css?1549020629" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/quick/installation/">
+  <body class="" data-url="/en/quick/chess/sample/">
     <nav id="sidebar" class="">
 
 
@@ -233,8 +233,8 @@
   
     
     <li data-nav-id="/en/quick/installation/" title="Installation" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/en/quick/installation/">
@@ -257,7 +257,7 @@
   
     
     <li data-nav-id="/en/quick/chess/" title="Eight Queens puzzle" class="dd-item 
-        
+        parent
         
         
         ">
@@ -284,8 +284,8 @@
   
     
     <li data-nav-id="/en/quick/chess/sample/" title="Project details" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/en/quick/chess/sample/">
@@ -356,7 +356,7 @@
                   
                     
                     
-                      <option id="en" value="/en/quick/installation/" selected>English</option>
+                      <option id="en" value="/en/quick/chess/sample/" selected>English</option>
                     
                   
               
@@ -428,7 +428,13 @@
             
           
           
-            <a href='/en/'>Learn D0SL Semantic Platform</a> > <a href='/en/quick/'>Quick Start</a> > Installation
+            
+            
+          
+          
+            <a href='/en/'>Learn D0SL Semantic Platform</a> > <a href='/en/quick/'>Quick Start</a> > <a href='/en/quick/chess/'>Eight Queens puzzle</a> > Project details
+          
+         
           
          
           
@@ -441,7 +447,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#to-run-the-chess-sample">To run the chess sample</a></li>
+<li><a href="#to-change-semantic">To change semantic</a></li>
+<li><a href="#java-part">Java part</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -453,25 +468,117 @@
         
         <div id="body-inner">
           
-            <h1>Installation</h1>
+            <h1>Project details</h1>
           
 
         
 
 
-<ol>
-<li>Install Jetbrains Meta Programming System (MPS) <a href="https://www.jetbrains.com/mps/">https://www.jetbrains.com/mps/</a></li>
-<li>Clone the repo: <code>git clone https://github.com/kirikprotocol/examples-d0sl</code></li>
-<li>In MPS install d0sl plugin from file d0sl_plugin*.zip (choose load plugin from disk option)
 
-<ol>
-<li><img src="install-plugin-1.png" alt="Install plugin" /></li>
-<li><img src="install-plugin-2.png" alt="Install plugin" /></li>
-<li><img src="install-plugin-3.png" alt="Install plugin" /></li>
-</ol></li>
-<li>Open the project in MPS by choosing the directory cloned (e.g. examples-d0sl directory)</li>
-<li>Rebuild the project</li>
-</ol>
+
+<h2 id="to-run-the-chess-sample">To run the chess sample</h2>
+
+<ul>
+<li>Find a semantic model ChessAII in org.d0sl.examples/sandbox</li>
+<li>Open the context menu on it by pressing the right mouse button. And select Run Node ChessAII.</li>
+</ul>
+
+<p><img src="run.png" alt="Run the chess sample" /></p>
+
+<h2 id="to-change-semantic">To change semantic</h2>
+
+<p>Semantic model is defined in sandbox/ChessAII. When the robot places the queens it calls <code>check board</code> predicate. In the semantic model in advance prepared several different predicates <code>check board</code>. Just change the name of the current <code>check board</code> predicate, and rename some other (e.g. <code>check board1</code> name to <code>check board</code>. And you can see how the behavior of the robot changes depending on the given semantics.</p>
+
+<p>For example, the following model will forbid a robot to put queens on one line, but he will be able to arrange them on one diagonal.</p>
+
+<pre><code>def check board2(board : ChessBoard) means 
+  check all 
+    var queens = ChessDSL.get queens(board) 
+    for all q1, q2 in queens 
+      not ChessDSL.on one line(q1, q2) 
+  end 
+end def
+</code></pre>
+
+<div class="notices warning" ><p>After each change of the model, do not forget to rebuild the MPS solution (Ctrl+F9).</p>
+</div>
+
+
+<h2 id="java-part">Java part</h2>
+
+<p>You can find the Java part of the example in org.d0sl.examples/chess</p>
+
+<blockquote>
+<p>First of all, pay attention to the ChessDSL class, which, using annotations, indicates the domain specific functions to which we refer in our semantic model. For example</p>
+</blockquote>
+
+<pre><code class="language-java">/** 
+  Represents a DSL for task: Arrangement of chess queens 
+ */ 
+ 
+@DomainModel(name = &quot;ChessDSL&quot;) 
+public class ChessDSL { 
+   &lt;...SKIPPED...&gt;
+  /** 
+    Check if two queens are in the same horizontal or vertical 
+    @param 
+    @return 
+   */ 
+  @DomainFunction(name = &quot;on one line&quot;) 
+  public boolean onOneLine(ChessQueen q1, ChessQueen q2) { 
+    if (q1.getCol() == q2.getCol() || q1.getRaw() == q2.getRaw()) { return true; } 
+    return false; 
+  } 
+  /** 
+    Check if two queens are in the same diagonal 
+    @param 
+    @return 
+   */ 
+  @DomainFunction(name = &quot;on one diagonal&quot;) 
+  public boolean onOneDiagonal(ChessQueen q1, ChessQueen q2) { 
+    if (Math.abs(q1.getCol() - q2.getCol()) == Math.abs(q1.getRaw() - q2.getRaw())) { return true; } 
+    return false; 
+  } 
+}
+</code></pre>
+
+<p>After that, in our semantic model, we can indicate in which class the implementation of predicates <code>on one line</code> and <code>on one diagonal</code>  can be found.</p>
+
+<pre><code>use ChessDSL from org.d0sl.examples.chess.ChessDSL
+</code></pre>
+
+<p>Also in class ChessRobot you can find how the robot calls predicate <code>check board</code> from semantic model.</p>
+
+<pre><code class="language-java">try { 
+  board.getBoard().setPieces(pieces); 
+  LogicalConstant check = semantic.callPredicate(&quot;check board&quot;, board); 
+  if (check.getValue() != Logical.TRUE) { 
+    pieces[i][j] = null; 
+    board.getBoard().setPieces(pieces); 
+  } else { 
+    boardPanel.setPiece(pieces[i][j], visit); 
+    boardPanel.refreshUI(); 
+    if (queenNumber == 7) { 
+      return true; 
+    } else { 
+      if (arrange(pieces, new LinkedList(), queenNumber + 1)) { 
+        return true; 
+      } else { 
+        pieces[i][j] = null; 
+        board.getBoard().setPieces(pieces); 
+        boardPanel.clear(visit); 
+        boardPanel.refreshUI(); 
+      } 
+    } 
+  } 
+} catch (SemanticException e) { 
+  e.printStackTrace(); 
+}
+</code></pre>
+
+<div class="notices note" ><p>The algorithm is as follows: the robot puts the next queen and asks if everything is good. If the answer is positive, the robot tries to put the next queen, and if the answer is negative, the robot removes the last queen and searches for another cell for it. If a situation arises when it is impossible to place the next queen on any square, the robot goes back a step, cutting off the bad field.</p>
+</div>
+
 
 
 <footer class=" footline" >
@@ -544,7 +651,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -561,8 +667,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -578,6 +682,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -605,10 +710,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/en/quick/requirements/" title="Requirements"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/en/quick/chess/" title="Eight Queens puzzle"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/en/quick/chess/" title="Eight Queens puzzle" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/en/quick/requirements/" title="Requirements" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

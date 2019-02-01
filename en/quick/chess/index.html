@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Installation :: D0SL Semantic Platform</title>
+    <title>Eight Queens puzzle :: D0SL Semantic Platform</title>
 
     
     <link href="/css/nucleus.css?1549020629" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/quick/installation/">
+  <body class="" data-url="/en/quick/chess/">
     <nav id="sidebar" class="">
 
 
@@ -233,8 +233,8 @@
   
     
     <li data-nav-id="/en/quick/installation/" title="Installation" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/en/quick/installation/">
@@ -257,8 +257,8 @@
   
     
     <li data-nav-id="/en/quick/chess/" title="Eight Queens puzzle" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/en/quick/chess/">
@@ -356,7 +356,7 @@
                   
                     
                     
-                      <option id="en" value="/en/quick/installation/" selected>English</option>
+                      <option id="en" value="/en/quick/chess/" selected>English</option>
                     
                   
               
@@ -412,8 +412,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -428,7 +426,7 @@
             
           
           
-            <a href='/en/'>Learn D0SL Semantic Platform</a> > <a href='/en/quick/'>Quick Start</a> > Installation
+            <a href='/en/'>Learn D0SL Semantic Platform</a> > <a href='/en/quick/'>Quick Start</a> > Eight Queens puzzle
           
          
           
@@ -439,45 +437,57 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-
-    </div>
-</div>
-
-                
               </div>
             </div>
             
 
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>Installation</h1>
           
 
         
 
 
-<ol>
-<li>Install Jetbrains Meta Programming System (MPS) <a href="https://www.jetbrains.com/mps/">https://www.jetbrains.com/mps/</a></li>
-<li>Clone the repo: <code>git clone https://github.com/kirikprotocol/examples-d0sl</code></li>
-<li>In MPS install d0sl plugin from file d0sl_plugin*.zip (choose load plugin from disk option)
 
-<ol>
-<li><img src="install-plugin-1.png" alt="Install plugin" /></li>
-<li><img src="install-plugin-2.png" alt="Install plugin" /></li>
-<li><img src="install-plugin-3.png" alt="Install plugin" /></li>
-</ol></li>
-<li>Open the project in MPS by choosing the directory cloned (e.g. examples-d0sl directory)</li>
-<li>Rebuild the project</li>
-</ol>
+
+<h1 id="the-eight-queens-puzzle">The eight queens puzzle</h1>
+
+<p>The eight queens puzzle is the problem of placing eight chess queens on an 8×8 chessboard so that no two queens threaten each other.</p>
+
+<div class="notices note" ><p>The problem of finding all solutions to the 8-queens problem can be quite computationally expensive, as there are 4,426,165,368 (i.e., 64C8) possible arrangements of eight queens on an 8×8 board, but only 92 solutions.</p>
+</div>
+
+
+<p>The semantic way to solve this problem is as follows:</p>
+
+<ul>
+<li>Imagine that we have a robot that can arrange randomly eight queens on a chessboard. But he doesn&rsquo;t know whether the position is the right one or not.</li>
+<li>Then, after each arrangement, the robot asks us if he placed the queens on the board correctly. If we say that is correct, the robot considers the task completed. And if we say what is wrong, the robot tries to place the queens in a different way.</li>
+<li>In order to determine whether the queens are placed correctly on the chessboard, we will write semantic rules in the d0sl language. For example: For any two queens on a chessboard, it must be true that they are not on the same diagonal, and they are not on the same line.</li>
+</ul>
+
+<pre><code>def check board(board : ChessBoard) means 
+  check all 
+    var queens = ChessDSL.get queens(board) 
+    for all q1, q2 in queens 
+      not ChessDSL.on one line(q1, q2) and not ChessDSL.on one diagonal(q1, q2) 
+  end 
+end def
+</code></pre>
+
+<div class="notices note" ><p>Next, we show how to run the example and see the code.</p>
+</div>
+
 
 
 <footer class=" footline" >
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -544,7 +554,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -561,8 +570,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -578,6 +585,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -605,10 +615,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/en/quick/requirements/" title="Requirements"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/en/quick/installation/" title="Installation"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/en/quick/chess/" title="Eight Queens puzzle" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/en/quick/chess/sample/" title="Project details" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
