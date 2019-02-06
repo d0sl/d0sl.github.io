@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Requirements :: d0sl Semantic Platform</title>
+    <title>Use :: d0sl Semantic Platform</title>
 
     
     <link href="/css/nucleus.css?1549445386" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/quick/requirements/">
+  <body class="" data-url="/en/d0sl/use/">
     <nav id="sidebar" class="">
 
 
@@ -113,7 +113,7 @@
   
     
     <li data-nav-id="/en/quick/" title="Quick start" class="dd-item 
-        parent
+        
         
         
         ">
@@ -140,8 +140,8 @@
   
     
     <li data-nav-id="/en/quick/requirements/" title="Requirements" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/en/quick/requirements/">
@@ -255,7 +255,7 @@
   
     
     <li data-nav-id="/en/d0sl/" title="d0sl language" class="dd-item 
-        
+        parent
         
         
         ">
@@ -450,8 +450,8 @@
   
     
     <li data-nav-id="/en/d0sl/use/" title="Use" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/en/d0sl/use/">
@@ -561,7 +561,7 @@
                   
                     
                     
-                      <option id="en" value="/en/quick/requirements/" selected>English</option>
+                      <option id="en" value="/en/d0sl/use/" selected>English</option>
                     
                   
               
@@ -633,7 +633,7 @@
             
           
           
-            <a href='/en/'>Learn d0sl Semantic Platform</a> > <a href='/en/quick/'>Quick start</a> > Requirements
+            <a href='/en/'>Learn d0sl Semantic Platform</a> > <a href='/en/d0sl/'>d0sl language</a> > Use
           
          
           
@@ -658,32 +658,37 @@
         
         <div id="body-inner">
           
-            <h1>Requirements</h1>
+            <h1>Use</h1>
           
 
         
 
 
-<p>So, our main goal is to give a person the opportunity to describe logical rules in an understandable language. We call it d0sl or Delta Zero Semantic Language.</p>
+<p>In Semantic Model the <code>use</code> statement allows you to include other Semantic and Domain models. This means that if you included another semantic model through the <code>use</code> statement, you can call its predicates. Similarly it works with a domain model.</p>
 
-<p>For this, we should to implement the language, as well as provide a convenient editor (or IDE Integrated Development Environment) that would allow to create d0sl documents and even immediately run.</p>
+<p>For example, below we include AutodromeDSL domain model:</p>
 
-<p>There are various ways to reach this, but we chose as a bases the powerfull Jetbrains MPS (Meta Programming System).</p>
+<pre><code>use AutodromeDSL from org.d0sl.examples.auto.AutodromeDSL
+</code></pre>
 
-<div class="notices note" ><p>You should preinstall it from <a href="https://www.jetbrains.com/mps/download">here</a></p>
+<p>After that we can call domain functions defined in AutodromeDSL in our Semantic Model like this:</p>
+
+<pre><code>def can stop2(car : Car) means 
+  check all 
+    not AutodromeDSL.wall ahead(car) 
+    not AutodromeDSL.road sign(car) 
+    AutodromeDSL.car ahead(car) 
+  end 
+end def
+</code></pre>
+
+<div class="notices tip" ><p>You can specify the implementation class for the domain model in the <code>from</code> field (for the Semantic Model, this is not necessary). The implementation class needs to be specified only if you want to run the model inside the MPS project.</p>
 </div>
 
 
-<p>We choose MPS because:</p>
+<div class="notices warning" ><p>If you specified an implementation class, it should be accessible via dependencies in your MPS project. The implementation can be added either through the jar file, or implemented directly in the MPS in a separate solution, as implemented for Chess and Autodrome examples.</p>
+</div>
 
-<blockquote>
-<ol>
-<li>MPS IDE is very similar to Intelliji Idea, PyCharm and other Jetbrains products.</li>
-<li>MPS helps to create powerful DSL (domain specific languages) and helps to create their powerful extensions.<br /></li>
-<li>With MPS we can build plugins of d0sl Language for Intelliji Idea<br /></li>
-<li>We were able to develop a technology that does not depend on the MPS and can be used separately. But we see no reason to abandon the convenience of the MPS where it is possible.</li>
-</ol>
-</blockquote>
 
 
 <footer class=" footline" >
@@ -721,57 +726,8 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -799,8 +755,18 @@
             
         
                     
+                        
             
-        
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -836,10 +802,35 @@
             
         
                     
+            
+        
+                    
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -952,6 +943,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -992,10 +1003,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/en/quick/" title="Quick start"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/en/d0sl/domain/" title="Domain model"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/en/quick/installation/" title="Installation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/en/d0sl/editor/" title="Editor tips" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -91,11 +91,25 @@
 	"content": " Domain object Inside the domain model, you can create types using the keyword type, and then to use objects of this type in the arguments of domain functions and semantic predicates.\nDomain function Inside the domain model, you can define domain functions using the keyword fun, and then to use this functions in semantic predicates.\n"
 },
 {
+	"uri": "/en/d0sl/use/",
+	"title": "Use",
+	"tags": [],
+	"description": "",
+	"content": "In Semantic Model the use statement allows you to include other Semantic and Domain models. This means that if you included another semantic model through the use statement, you can call its predicates. Similarly it works with a domain model.\nFor example, below we include AutodromeDSL domain model:\nuse AutodromeDSL from org.d0sl.examples.auto.AutodromeDSL  After that we can call domain functions defined in AutodromeDSL in our Semantic Model like this:\ndef can stop2(car : Car) means check all not AutodromeDSL.wall ahead(car) not AutodromeDSL.road sign(car) AutodromeDSL.car ahead(car) end end def  You can specify the implementation class for the domain model in the from field (for the Semantic Model, this is not necessary). The implementation class needs to be specified only if you want to run the model inside the MPS project.\n\rIf you specified an implementation class, it should be accessible via dependencies in your MPS project. The implementation can be added either through the jar file, or implemented directly in the MPS in a separate solution, as implemented for Chess and Autodrome examples.\n\r"
+},
+{
 	"uri": "/en/d0sl/editor/",
 	"title": "Editor tips",
 	"tags": [],
 	"description": "",
 	"content": "   Alias Effect     Ctrl+space Code completion   Alt+enter Intentions menu   Ctrl+w Item (incremental) selection   def Creates predicate definition   use Creates use keyword   check Check all keyword   and, or, not Logical operation   \u0026ldquo; \u0026rdquo;\u0026ldquo;, string value   for For all keyword   if Implication (if)   Insert, enter When needs to insert argument for predicates or functions   var Local variable (inside check-all)   fun Creates function in Domain Model   typedef Creates domain type in Domain Model    "
+},
+{
+	"uri": "/en/d0sl/run/",
+	"title": "How to run model in MPS",
+	"tags": [],
+	"description": "",
+	"content": "If you define the predicate start() without parameters in your semantic model, it will be called automatically when you run the model through the context menu in the MPS project.\n\rFor example, the following start() predicate in the example about the Autodrome first sets up obstacles and road signs on the autodrome field, and then starts the graphical user interface by calling the another start domain function.\ndef start() means check all # set walls AutodromeDSL.add wall(5, 1) AutodromeDSL.add wall(5, 14) AutodromeDSL.add wall(10, 8) # set road signs AutodromeDSL.add road sign(4, 5, \u0026quot;south\u0026quot;) AutodromeDSL.add road sign(6, 9, \u0026quot;north\u0026quot;) AutodromeDSL.add road sign(7, 7, \u0026quot;east\u0026quot;) AutodromeDSL.start(10, 500) end end def  "
 },
 {
 	"uri": "/en/categories/",

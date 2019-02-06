@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Requirements :: d0sl Semantic Platform</title>
+    <title>How to run model in MPS :: d0sl Semantic Platform</title>
 
     
     <link href="/css/nucleus.css?1549445386" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/quick/requirements/">
+  <body class="" data-url="/en/d0sl/run/">
     <nav id="sidebar" class="">
 
 
@@ -113,7 +113,7 @@
   
     
     <li data-nav-id="/en/quick/" title="Quick start" class="dd-item 
-        parent
+        
         
         
         ">
@@ -140,8 +140,8 @@
   
     
     <li data-nav-id="/en/quick/requirements/" title="Requirements" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/en/quick/requirements/">
@@ -255,7 +255,7 @@
   
     
     <li data-nav-id="/en/d0sl/" title="d0sl language" class="dd-item 
-        
+        parent
         
         
         ">
@@ -498,8 +498,8 @@
   
     
     <li data-nav-id="/en/d0sl/run/" title="How to run model in MPS" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/en/d0sl/run/">
@@ -561,7 +561,7 @@
                   
                     
                     
-                      <option id="en" value="/en/quick/requirements/" selected>English</option>
+                      <option id="en" value="/en/d0sl/run/" selected>English</option>
                     
                   
               
@@ -633,7 +633,7 @@
             
           
           
-            <a href='/en/'>Learn d0sl Semantic Platform</a> > <a href='/en/quick/'>Quick start</a> > Requirements
+            <a href='/en/'>Learn d0sl Semantic Platform</a> > <a href='/en/d0sl/'>d0sl language</a> > How to run model in MPS
           
          
           
@@ -658,32 +658,33 @@
         
         <div id="body-inner">
           
-            <h1>Requirements</h1>
+            <h1>How to run model in MPS</h1>
           
 
         
 
 
-<p>So, our main goal is to give a person the opportunity to describe logical rules in an understandable language. We call it d0sl or Delta Zero Semantic Language.</p>
-
-<p>For this, we should to implement the language, as well as provide a convenient editor (or IDE Integrated Development Environment) that would allow to create d0sl documents and even immediately run.</p>
-
-<p>There are various ways to reach this, but we chose as a bases the powerfull Jetbrains MPS (Meta Programming System).</p>
-
-<div class="notices note" ><p>You should preinstall it from <a href="https://www.jetbrains.com/mps/download">here</a></p>
+<div class="notices tip" ><p>If you define the predicate <code>start()</code> without parameters in your semantic model, it will be called automatically when you run the model through the context menu in the MPS project.</p>
 </div>
 
 
-<p>We choose MPS because:</p>
+<p>For example, the following <code>start()</code> predicate in the example about the Autodrome first sets up obstacles and road signs on the autodrome field, and then starts the graphical user interface by calling the another <code>start</code> domain function.</p>
 
-<blockquote>
-<ol>
-<li>MPS IDE is very similar to Intelliji Idea, PyCharm and other Jetbrains products.</li>
-<li>MPS helps to create powerful DSL (domain specific languages) and helps to create their powerful extensions.<br /></li>
-<li>With MPS we can build plugins of d0sl Language for Intelliji Idea<br /></li>
-<li>We were able to develop a technology that does not depend on the MPS and can be used separately. But we see no reason to abandon the convenience of the MPS where it is possible.</li>
-</ol>
-</blockquote>
+<pre><code>def start() means 
+  check all 
+    # set walls 
+    AutodromeDSL.add wall(5, 1) 
+    AutodromeDSL.add wall(5, 14) 
+    AutodromeDSL.add wall(10, 8) 
+    # set road signs 
+    AutodromeDSL.add road sign(4, 5, &quot;south&quot;) 
+    AutodromeDSL.add road sign(6, 9, &quot;north&quot;) 
+    AutodromeDSL.add road sign(7, 7, &quot;east&quot;) 
+     
+    AutodromeDSL.start(10, 500) 
+  end 
+end def
+</code></pre>
 
 
 <footer class=" footline" >
@@ -721,57 +722,8 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -799,8 +751,18 @@
             
         
                     
+                        
             
-        
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -836,10 +798,35 @@
             
         
                     
+            
+        
+                    
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -968,6 +955,23 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -992,10 +996,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/en/quick/" title="Quick start"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/en/d0sl/editor/" title="Editor tips"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/en/quick/installation/" title="Installation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/en/d0sl/root/" title="Semantic and Domain models" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
