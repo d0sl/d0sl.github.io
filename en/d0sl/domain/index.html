@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Predicate :: d0sl Semantic Platform</title>
+    <title>Domain model :: d0sl Semantic Platform</title>
 
     
     <link href="/css/nucleus.css?1549436463" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/d0sl/predicate/">
+  <body class="" data-url="/en/d0sl/domain/">
     <nav id="sidebar" class="">
 
 
@@ -306,8 +306,8 @@
   
     
     <li data-nav-id="/en/d0sl/predicate/" title="Predicate" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/en/d0sl/predicate/">
@@ -426,8 +426,8 @@
   
     
     <li data-nav-id="/en/d0sl/domain/" title="Domain model" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/en/d0sl/domain/">
@@ -513,7 +513,7 @@
                   
                     
                     
-                      <option id="en" value="/en/d0sl/predicate/" selected>English</option>
+                      <option id="en" value="/en/d0sl/domain/" selected>English</option>
                     
                   
               
@@ -585,7 +585,7 @@
             
           
           
-            <a href='/en/'>Learn d0sl Semantic Platform</a> > <a href='/en/d0sl/'>d0sl language</a> > Predicate
+            <a href='/en/'>Learn d0sl Semantic Platform</a> > <a href='/en/d0sl/'>d0sl language</a> > Domain model
           
          
           
@@ -602,13 +602,8 @@
 <ul>
 <li>
 <ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#predicate-example">Predicate example</a></li>
-</ul></li>
-</ul></li>
+<li><a href="#domain-object">Domain object</a></li>
+<li><a href="#domain-function">Domain function</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -623,7 +618,7 @@
         
         <div id="body-inner">
           
-            <h1>Predicate</h1>
+            <h1>Domain model</h1>
           
 
         
@@ -631,39 +626,17 @@
 
 
 
-<p>In mathematical logic, a predicate is commonly understood to be a Boolean-valued function. However, we use the extended notion of a logical type instead of Boolean. And a predicate can return three values: <strong>true</strong>, <strong>false</strong>, and <strong>none</strong> (undefined).</p>
+<h2 id="domain-object">Domain object</h2>
 
-<div class="notices warning" ><p>If the predicate returns <strong>none</strong>, you must treat this as an exception. For example, a timeout occurred. <strong>none</strong> means that the predicate could not calculate <strong>true</strong> or <strong>false</strong>.</p>
-</div>
+<p>Inside the domain model, you can create types using the keyword <code>type</code>, and then to use objects of this type in the arguments of domain functions and semantic predicates.</p>
 
+<p><img src="type.png" alt="type" /></p>
 
-<p>To create a predicate within the semantic model, you must type the keyword def. Then the predicate pattern appears. And you can specify the name of the predicate, its arguments, and the body of the predicate, which is a logical expression.</p>
+<h2 id="domain-function">Domain function</h2>
 
-<p><img src="def.png" alt="def" /></p>
+<p>Inside the domain model, you can define domain functions using the keyword <code>fun</code>, and then to use this functions in semantic predicates.</p>
 
-<div class="notices tip" ><p>The predicate name may contain spaces. Also you can use not only Latin, but also other national alphabets ..</p>
-</div>
-
-
-<div class="notices tip" ><p>The predicate pattern is created without arguments. To add an argument, place the cursor inside the parentheses and press Enter or Insert.</p>
-</div>
-
-
-<div class="notices tip" ><p>The predicate body can be any logical expression of d0sl language: <code>and</code>, <code>or</code>, <code>not</code>, <code>check all</code>, <code>if</code>, <code>for all</code>.
-But for simplicity, we advise the body of the predicate to start with the <code>check all</code> instruction. <code>check all</code> instruction is equivalent of <code>and</code> instruction with many arguments each is in new line.</p>
-</div>
-
-
-<h4 id="predicate-example">Predicate example</h4>
-
-<pre><code>def check board(board : ChessBoard) means 
-  check all 
-    var queens = ChessDSL.get queens(board) 
-    for all q1, q2 in queens 
-      not ChessDSL.on one line(q1, q2) and not ChessDSL.on one diagonal(q1, q2) 
-  end 
-end def
-</code></pre>
+<p><img src="fun.png" alt="fun" /></p>
 
 
 <footer class=" footline" >
@@ -823,26 +796,6 @@ end def
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -922,6 +875,26 @@ end def
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -946,10 +919,10 @@ end def
 	 
 	 
 		
-			<a class="nav nav-prev" href="/en/d0sl/root/" title="Semantic and Domain models"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/en/d0sl/var/" title="Variables"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/en/d0sl/logical/" title="Logical operations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/en/d0sl/editor/" title="Editor tips" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

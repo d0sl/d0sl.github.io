@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Predicate :: d0sl Semantic Platform</title>
+    <title>For all :: d0sl Semantic Platform</title>
 
     
     <link href="/css/nucleus.css?1549436463" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/d0sl/predicate/">
+  <body class="" data-url="/en/d0sl/for/">
     <nav id="sidebar" class="">
 
 
@@ -306,8 +306,8 @@
   
     
     <li data-nav-id="/en/d0sl/predicate/" title="Predicate" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/en/d0sl/predicate/">
@@ -378,8 +378,8 @@
   
     
     <li data-nav-id="/en/d0sl/for/" title="For all" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/en/d0sl/for/">
@@ -513,7 +513,7 @@
                   
                     
                     
-                      <option id="en" value="/en/d0sl/predicate/" selected>English</option>
+                      <option id="en" value="/en/d0sl/for/" selected>English</option>
                     
                   
               
@@ -585,7 +585,7 @@
             
           
           
-            <a href='/en/'>Learn d0sl Semantic Platform</a> > <a href='/en/d0sl/'>d0sl language</a> > Predicate
+            <a href='/en/'>Learn d0sl Semantic Platform</a> > <a href='/en/d0sl/'>d0sl language</a> > For all
           
          
           
@@ -606,7 +606,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#predicate-example">Predicate example</a></li>
+<li><a href="#for-all-example">For all example</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -623,7 +623,7 @@
         
         <div id="body-inner">
           
-            <h1>Predicate</h1>
+            <h1>For all</h1>
           
 
         
@@ -631,39 +631,21 @@
 
 
 
-<p>In mathematical logic, a predicate is commonly understood to be a Boolean-valued function. However, we use the extended notion of a logical type instead of Boolean. And a predicate can return three values: <strong>true</strong>, <strong>false</strong>, and <strong>none</strong> (undefined).</p>
+<p>To create <code>for all</code> logical expression, you must type the keyword <code>for</code>. Then the <code>for all</code> pattern appears.</p>
 
-<div class="notices warning" ><p>If the predicate returns <strong>none</strong>, you must treat this as an exception. For example, a timeout occurred. <strong>none</strong> means that the predicate could not calculate <strong>true</strong> or <strong>false</strong>.</p>
+<p><img src="for.png" alt="for all" /></p>
+
+<p>The general form of this logical expression is <code>for all x1, x2... xn in listX Expression(x1,...,xn)</code>. It means that for every <code>&lt;x1,..,xn&gt;</code> from a list <code>listX</code> an expression <code>Expression(x1, ..., xn)</code> should be <code>true</code>.</p>
+
+<h4 id="for-all-example">For all example</h4>
+
+<p><img src="for-example1.png" alt="for all example1" /></p>
+
+<p><img src="for-example2.png" alt="for all example2" /></p>
+
+<div class="notices warning" ><p>To calculate the result, a selection of various <code>&lt;x1...xn&gt;</code> combinations from a certain list is made. If such a selection cannot be made, it is considered that the formula was not calculated and the <code>for all</code> expression returns <code>true</code>. That is, if the list is empty, or of a smaller dimension than the vector <code>&lt;x1...xn&gt;</code>, you will end up with a <code>true</code>, and the formula inside <code>for all</code> will not be calculated.</p>
 </div>
 
-
-<p>To create a predicate within the semantic model, you must type the keyword def. Then the predicate pattern appears. And you can specify the name of the predicate, its arguments, and the body of the predicate, which is a logical expression.</p>
-
-<p><img src="def.png" alt="def" /></p>
-
-<div class="notices tip" ><p>The predicate name may contain spaces. Also you can use not only Latin, but also other national alphabets ..</p>
-</div>
-
-
-<div class="notices tip" ><p>The predicate pattern is created without arguments. To add an argument, place the cursor inside the parentheses and press Enter or Insert.</p>
-</div>
-
-
-<div class="notices tip" ><p>The predicate body can be any logical expression of d0sl language: <code>and</code>, <code>or</code>, <code>not</code>, <code>check all</code>, <code>if</code>, <code>for all</code>.
-But for simplicity, we advise the body of the predicate to start with the <code>check all</code> instruction. <code>check all</code> instruction is equivalent of <code>and</code> instruction with many arguments each is in new line.</p>
-</div>
-
-
-<h4 id="predicate-example">Predicate example</h4>
-
-<pre><code>def check board(board : ChessBoard) means 
-  check all 
-    var queens = ChessDSL.get queens(board) 
-    for all q1, q2 in queens 
-      not ChessDSL.on one line(q1, q2) and not ChessDSL.on one diagonal(q1, q2) 
-  end 
-end def
-</code></pre>
 
 
 <footer class=" footline" >
@@ -823,26 +805,6 @@ end def
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -890,6 +852,26 @@ end def
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -946,10 +928,10 @@ end def
 	 
 	 
 		
-			<a class="nav nav-prev" href="/en/d0sl/root/" title="Semantic and Domain models"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/en/d0sl/if/" title="If implication"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/en/d0sl/logical/" title="Logical operations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/en/d0sl/var/" title="Variables" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

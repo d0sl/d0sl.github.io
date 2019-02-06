@@ -40,6 +40,26 @@
   </url>
   
   <url>
+    <loc>/en/d0sl/if/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/d0sl/for/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/d0sl/var/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/d0sl/domain/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/d0sl/editor/</loc>
+  </url>
+  
+  <url>
     <loc>/en/categories/</loc>
     <priority>0</priority>
     <xhtml:link

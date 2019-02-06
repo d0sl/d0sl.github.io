@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Predicate :: d0sl Semantic Platform</title>
+    <title>Variables :: d0sl Semantic Platform</title>
 
     
     <link href="/css/nucleus.css?1549436463" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/d0sl/predicate/">
+  <body class="" data-url="/en/d0sl/var/">
     <nav id="sidebar" class="">
 
 
@@ -306,8 +306,8 @@
   
     
     <li data-nav-id="/en/d0sl/predicate/" title="Predicate" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/en/d0sl/predicate/">
@@ -402,8 +402,8 @@
   
     
     <li data-nav-id="/en/d0sl/var/" title="Variables" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/en/d0sl/var/">
@@ -513,7 +513,7 @@
                   
                     
                     
-                      <option id="en" value="/en/d0sl/predicate/" selected>English</option>
+                      <option id="en" value="/en/d0sl/var/" selected>English</option>
                     
                   
               
@@ -585,7 +585,7 @@
             
           
           
-            <a href='/en/'>Learn d0sl Semantic Platform</a> > <a href='/en/d0sl/'>d0sl language</a> > Predicate
+            <a href='/en/'>Learn d0sl Semantic Platform</a> > <a href='/en/d0sl/'>d0sl language</a> > Variables
           
          
           
@@ -606,7 +606,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#predicate-example">Predicate example</a></li>
+<li><a href="#variable-example">Variable example</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -623,7 +623,7 @@
         
         <div id="body-inner">
           
-            <h1>Predicate</h1>
+            <h1>Variables</h1>
           
 
         
@@ -631,36 +631,26 @@
 
 
 
-<p>In mathematical logic, a predicate is commonly understood to be a Boolean-valued function. However, we use the extended notion of a logical type instead of Boolean. And a predicate can return three values: <strong>true</strong>, <strong>false</strong>, and <strong>none</strong> (undefined).</p>
+<p>You can use local variables inside <code>check all</code> block by entering <code>var</code> keyword.</p>
 
-<div class="notices warning" ><p>If the predicate returns <strong>none</strong>, you must treat this as an exception. For example, a timeout occurred. <strong>none</strong> means that the predicate could not calculate <strong>true</strong> or <strong>false</strong>.</p>
+<div class="notices warning" ><p>There are important restrictions on the use of variables. First, you cannot change their value after it has been calculated. Secondly, each time the predicate is called, the value of a local variable is calculated only once. That is, if you use the variable reference several times within the predicate, the value will be calculated only when you first use</p>
 </div>
 
 
-<p>To create a predicate within the semantic model, you must type the keyword def. Then the predicate pattern appears. And you can specify the name of the predicate, its arguments, and the body of the predicate, which is a logical expression.</p>
+<h4 id="variable-example">Variable example</h4>
 
-<p><img src="def.png" alt="def" /></p>
-
-<div class="notices tip" ><p>The predicate name may contain spaces. Also you can use not only Latin, but also other national alphabets ..</p>
-</div>
-
-
-<div class="notices tip" ><p>The predicate pattern is created without arguments. To add an argument, place the cursor inside the parentheses and press Enter or Insert.</p>
-</div>
-
-
-<div class="notices tip" ><p>The predicate body can be any logical expression of d0sl language: <code>and</code>, <code>or</code>, <code>not</code>, <code>check all</code>, <code>if</code>, <code>for all</code>.
-But for simplicity, we advise the body of the predicate to start with the <code>check all</code> instruction. <code>check all</code> instruction is equivalent of <code>and</code> instruction with many arguments each is in new line.</p>
-</div>
-
-
-<h4 id="predicate-example">Predicate example</h4>
-
-<pre><code>def check board(board : ChessBoard) means 
+<pre><code># Testing for sin &amp; cos 
+def test() means 
   check all 
-    var queens = ChessDSL.get queens(board) 
-    for all q1, q2 in queens 
-      not ChessDSL.on one line(q1, q2) and not ChessDSL.on one diagonal(q1, q2) 
+    var angle = 35 
+    var cosinus = Math.cos(angle) 
+    var sinus = Math.sin(angle) 
+    var sum of squares = Math.pow(cosinus, 2) + Math.pow(sinus, 2) 
+     
+    # considering the features of the library java.lang.Math
+    # and inaccurate calculations when converting degrees to radians 
+    sum of squares &lt;= 1 
+    sum of squares &gt;= 0.999999 
   end 
 end def
 </code></pre>
@@ -823,26 +813,6 @@ end def
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -906,6 +876,26 @@ end def
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -946,10 +936,10 @@ end def
 	 
 	 
 		
-			<a class="nav nav-prev" href="/en/d0sl/root/" title="Semantic and Domain models"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/en/d0sl/for/" title="For all"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/en/d0sl/logical/" title="Logical operations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/en/d0sl/domain/" title="Domain model" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

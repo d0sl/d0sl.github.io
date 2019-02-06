@@ -60,7 +60,42 @@
 	"title": "Logical operations",
 	"tags": [],
 	"description": "",
-	"content": "   Operation Alias Example of true value Example of false value     and and true and true false and true   or or true or false false or false   not not not false not true   check all check check all true check all false    check all instruction is equivalent of and instruction with many arguments each is in new line. You can use check alias to enter check all instruction.\nFor example, the next expressions are equivalent.\nA and B and C and D and E  check all A B C D end check  "
+	"content": "   Operation Alias Example of true value Example of false value     and and true and true false and true   or or true or false false or false   not not not false not true   check all check check all true check all false    check all instruction is equivalent of and instruction with many arguments each is in new line. You can use check alias to enter check all instruction.\nFor example, the next expressions are equivalent.\nA and B and C and D  check all A B C D end check  "
+},
+{
+	"uri": "/en/d0sl/if/",
+	"title": "If implication",
+	"tags": [],
+	"description": "",
+	"content": " Implication as a if construction in d0sl is false only when the condition is true, and the then part is false. In other words, the implication if(A) then B is an abbreviated entry for the expression not(A) or B.\nUse the if keyword, and the editor will provide you with a template for the if construct.\n\rIf example "
+},
+{
+	"uri": "/en/d0sl/for/",
+	"title": "For all",
+	"tags": [],
+	"description": "",
+	"content": " To create for all logical expression, you must type the keyword for. Then the for all pattern appears.\nThe general form of this logical expression is for all x1, x2... xn in listX Expression(x1,...,xn). It means that for every \u0026lt;x1,..,xn\u0026gt; from a list listX an expression Expression(x1, ..., xn) should be true.\nFor all example To calculate the result, a selection of various \u0026lt;x1...xn\u0026gt; combinations from a certain list is made. If such a selection cannot be made, it is considered that the formula was not calculated and the for all expression returns true. That is, if the list is empty, or of a smaller dimension than the vector \u0026lt;x1...xn\u0026gt;, you will end up with a true, and the formula inside for all will not be calculated.\n\r"
+},
+{
+	"uri": "/en/d0sl/var/",
+	"title": "Variables",
+	"tags": [],
+	"description": "",
+	"content": " You can use local variables inside check all block by entering var keyword.\nThere are important restrictions on the use of variables. First, you cannot change their value after it has been calculated. Secondly, each time the predicate is called, the value of a local variable is calculated only once. That is, if you use the variable reference several times within the predicate, the value will be calculated only when you first use\n\rVariable example # Testing for sin \u0026amp; cos def test() means check all var angle = 35 var cosinus = Math.cos(angle) var sinus = Math.sin(angle) var sum of squares = Math.pow(cosinus, 2) + Math.pow(sinus, 2) # considering the features of the library java.lang.Math # and inaccurate calculations when converting degrees to radians sum of squares \u0026lt;= 1 sum of squares \u0026gt;= 0.999999 end end def  "
+},
+{
+	"uri": "/en/d0sl/domain/",
+	"title": "Domain model",
+	"tags": [],
+	"description": "",
+	"content": " Domain object Inside the domain model, you can create types using the keyword type, and then to use objects of this type in the arguments of domain functions and semantic predicates.\nDomain function Inside the domain model, you can define domain functions using the keyword fun, and then to use this functions in semantic predicates.\n"
+},
+{
+	"uri": "/en/d0sl/editor/",
+	"title": "Editor tips",
+	"tags": [],
+	"description": "",
+	"content": "   Alias Effect     Ctrl+space Code completion   Alt+enter Intentions menu   Ctrl+w Item (incremental) selection   def Creates predicate definition   use Creates use keyword   check Check all keyword   and, or, not Logical operation   \u0026ldquo; \u0026rdquo;\u0026ldquo;, string value   for For all keyword   if Implication (if)   Insert, enter When needs to insert argument for predicates or functions   var Local variable (inside check-all)   fun Creates function in Domain Model   typedef Creates domain type in Domain Model    "
 },
 {
 	"uri": "/en/categories/",
