@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Requirements on d0sl Semantic Platform</title>
-    <link>d0sl.github.io/en/quick/requirements/</link>
+    <link>https://d0sl.github.io/en/quick/requirements/</link>
     <description>Recent content in Requirements on d0sl Semantic Platform</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
-	<atom:link href="d0sl.github.io/en/quick/requirements/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://d0sl.github.io/en/quick/requirements/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

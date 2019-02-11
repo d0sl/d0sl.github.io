@@ -3,119 +3,119 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>d0sl.github.io/en/quick/chess/sample/</loc>
+    <loc>https://d0sl.github.io/en/quick/chess/sample/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/quick/</loc>
+    <loc>https://d0sl.github.io/en/quick/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/quick/requirements/</loc>
+    <loc>https://d0sl.github.io/en/quick/requirements/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/d0sl/root/</loc>
+    <loc>https://d0sl.github.io/en/d0sl/root/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/quick/installation/</loc>
+    <loc>https://d0sl.github.io/en/quick/installation/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/quick/chess/</loc>
+    <loc>https://d0sl.github.io/en/quick/chess/</loc>
     <lastmod>2019-02-01T14:53:57+07:00</lastmod>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/d0sl/predicate/</loc>
+    <loc>https://d0sl.github.io/en/d0sl/predicate/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/d0sl/</loc>
+    <loc>https://d0sl.github.io/en/d0sl/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/d0sl/logical/</loc>
+    <loc>https://d0sl.github.io/en/d0sl/logical/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/quick/trello/</loc>
+    <loc>https://d0sl.github.io/en/quick/trello/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/d0sl/if/</loc>
+    <loc>https://d0sl.github.io/en/d0sl/if/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/d0sl/for/</loc>
+    <loc>https://d0sl.github.io/en/d0sl/for/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/d0sl/var/</loc>
+    <loc>https://d0sl.github.io/en/d0sl/var/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/d0sl/domain/</loc>
+    <loc>https://d0sl.github.io/en/d0sl/domain/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/d0sl/use/</loc>
+    <loc>https://d0sl.github.io/en/d0sl/use/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/d0sl/editor/</loc>
+    <loc>https://d0sl.github.io/en/d0sl/editor/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/d0sl/run/</loc>
+    <loc>https://d0sl.github.io/en/d0sl/run/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/categories/</loc>
+    <loc>https://d0sl.github.io/en/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="d0sl.github.io/ru/categories/"
+                href="https://d0sl.github.io/ru/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="d0sl.github.io/en/categories/"
+                href="https://d0sl.github.io/en/categories/"
                 />
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/credits/</loc>
+    <loc>https://d0sl.github.io/en/credits/</loc>
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/tags/</loc>
+    <loc>https://d0sl.github.io/en/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="d0sl.github.io/ru/tags/"
+                href="https://d0sl.github.io/ru/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="d0sl.github.io/en/tags/"
+                href="https://d0sl.github.io/en/tags/"
                 />
   </url>
   
   <url>
-    <loc>d0sl.github.io/en/</loc>
+    <loc>https://d0sl.github.io/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="d0sl.github.io/ru/"
+                href="https://d0sl.github.io/ru/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="d0sl.github.io/en/"
+                href="https://d0sl.github.io/en/"
                 />
   </url>
   
