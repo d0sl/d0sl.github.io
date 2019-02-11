@@ -1,146 +1,146 @@
 [
 {
-	"uri": "/en/quick/chess/sample/",
+	"uri": "d0sl.github.io/en/quick/chess/sample/",
 	"title": "Project details",
 	"tags": [],
 	"description": "",
 	"content": " To run the chess sample  Find a semantic model ChessAII in org.d0sl.examples/sandbox Open the context menu on it by pressing the right mouse button. And select Run Node ChessAII.  To change semantic Semantic model is defined in sandbox/ChessAII. When the robot places the queens it calls check board predicate. In the semantic model in advance prepared several different predicates check board. Just change the name of the current check board predicate, and rename some other (e.g. check board1 name to check board. And you can see how the behavior of the robot changes depending on the given semantics.\nFor example, the following model will forbid a robot to put queens on one line, but he will be able to arrange them on one diagonal.\ndef check board2(board : ChessBoard) means check all var queens = ChessDSL.get queens(board) for all q1, q2 in queens not ChessDSL.on one line(q1, q2) end end def  After each change of the model, do not forget to rebuild the MPS solution (Ctrl+F9).\n\rJava part You can find the Java part of the example in org.d0sl.examples/chess\n First of all, pay attention to the ChessDSL class, which, using annotations, indicates the domain specific functions to which we refer in our semantic model. For example\n /** Represents a DSL for task: Arrangement of chess queens */ @DomainModel(name = \u0026quot;ChessDSL\u0026quot;) public class ChessDSL { \u0026lt;...SKIPPED...\u0026gt; /** Check if two queens are in the same horizontal or vertical @param @return */ @DomainFunction(name = \u0026quot;on one line\u0026quot;) public boolean onOneLine(ChessQueen q1, ChessQueen q2) { if (q1.getCol() == q2.getCol() || q1.getRaw() == q2.getRaw()) { return true; } return false; } /** Check if two queens are in the same diagonal @param @return */ @DomainFunction(name = \u0026quot;on one diagonal\u0026quot;) public boolean onOneDiagonal(ChessQueen q1, ChessQueen q2) { if (Math.abs(q1.getCol() - q2.getCol()) == Math.abs(q1.getRaw() - q2.getRaw())) { return true; } return false; } }  After that, in our semantic model, we can indicate in which class the implementation of predicates on one line and on one diagonal can be found.\nuse ChessDSL from org.d0sl.examples.chess.ChessDSL  Also in class ChessRobot you can find how the robot calls predicate check board from semantic model.\ntry { board.getBoard().setPieces(pieces); LogicalConstant check = semantic.callPredicate(\u0026quot;check board\u0026quot;, board); if (check.getValue() != Logical.TRUE) { pieces[i][j] = null; board.getBoard().setPieces(pieces); } else { boardPanel.setPiece(pieces[i][j], visit); boardPanel.refreshUI(); if (queenNumber == 7) { return true; } else { if (arrange(pieces, new LinkedList(), queenNumber + 1)) { return true; } else { pieces[i][j] = null; board.getBoard().setPieces(pieces); boardPanel.clear(visit); boardPanel.refreshUI(); } } } } catch (SemanticException e) { e.printStackTrace(); }  The algorithm is as follows: the robot puts the next queen and asks if everything is good. If the answer is positive, the robot tries to put the next queen, and if the answer is negative, the robot removes the last queen and searches for another cell for it. If a situation arises when it is impossible to place the next queen on any square, the robot goes back a step, cutting off the bad field.\n\r"
 },
 {
-	"uri": "/en/quick/",
+	"uri": "d0sl.github.io/en/quick/",
 	"title": "Quick start",
 	"tags": [],
 	"description": "",
 	"content": " Chapter 1 Quick start  The simplest way to quickly understand d0sl Semantic Platform is to run our samples. This chapter describes installation process of d0sl SDK and how to run the samples.\n "
 },
 {
-	"uri": "/en/quick/requirements/",
+	"uri": "d0sl.github.io/en/quick/requirements/",
 	"title": "Requirements",
 	"tags": [],
 	"description": "",
 	"content": "So, our main goal is to give a person the opportunity to describe logical rules in an understandable language. We call it d0sl or Delta Zero Semantic Language.\nFor this, we should to implement the language, as well as provide a convenient editor (or IDE Integrated Development Environment) that would allow to create d0sl documents and even immediately run.\nThere are various ways to reach this, but we chose as a bases the powerfull Jetbrains MPS (Meta Programming System).\nYou should preinstall it from here\n\rWe choose MPS because:\n  MPS IDE is very similar to Intelliji Idea, PyCharm and other Jetbrains products. MPS helps to create powerful DSL (domain specific languages) and helps to create their powerful extensions.\n With MPS we can build plugins of d0sl Language for Intelliji Idea\n We were able to develop a technology that does not depend on the MPS and can be used separately. But we see no reason to abandon the convenience of the MPS where it is possible.   "
 },
 {
-	"uri": "/en/d0sl/root/",
+	"uri": "d0sl.github.io/en/d0sl/root/",
 	"title": "Semantic and Domain models",
 	"tags": [],
 	"description": "",
 	"content": " There are two kinds of root documents in d0sl - the Semantic Model and the Domain Specific Model.\nSemantic Model is for defining semantic predicates and allows users to define logical rules.\nDomain Specific Model defines objects and functions that can be used in Semantic Model but are specific for domain area. This is similar to C header file.\ngraph TB subgraph Domain Specific Model c1[Domain Model]--c2[Domain objects] c1--c3[Domain functions] end subgraph Semantic Model a1[Semantic model]--a2[Predicates] end \rTo create a semantic or domain model, open the context menu by right-clicking on the sandbox, and then select new/SemanticLanguage/DomainSpecificModel or new/SemanticLanguage/SemanticModel.\nSemantic Model example model ChessAII def use ChessDSL from org.d0sl.examples.chess.ChessDSL def start() means check all ChessDSL.start() end end def def check board(board : ChessBoard) means check all var queens = ChessDSL.get queens(board) for all q1, q2 in queens not ChessDSL.on one line(q1, q2) and not ChessDSL.on one diagonal(q1, q2) end end def end def end ChessAII  Domain Model example domain specific model Math def # Math library # Square root fun sqrt(value : numeric) returns numeric # Sinus and Cosinus fun sin(value : numeric) returns numeric fun cos(value : numeric) returns numeric # Power function fun pow(value : numeric, power : numeric) returns numeric end Math  "
 },
 {
-	"uri": "/en/quick/installation/",
+	"uri": "d0sl.github.io/en/quick/installation/",
 	"title": "Installation",
 	"tags": [],
 	"description": "",
 	"content": " Install Jetbrains Meta Programming System (MPS) https://www.jetbrains.com/mps/ Clone the repo: git clone https://github.com/kirikprotocol/examples-d0sl In MPS install d0sl plugin from file d0sl_plugin*.zip (choose load plugin from disk option)      Open the project in MPS by choosing the directory cloned (e.g. examples-d0sl directory) Rebuild the project  "
 },
 {
-	"uri": "/en/quick/chess/",
+	"uri": "d0sl.github.io/en/quick/chess/",
 	"title": "Eight Queens puzzle",
 	"tags": [],
 	"description": "",
 	"content": " The eight queens puzzle The eight queens puzzle is the problem of placing eight chess queens on an 8×8 chessboard so that no two queens threaten each other.\nThe problem of finding all solutions to the 8-queens problem can be quite computationally expensive, as there are 4,426,165,368 (i.e., 64C8) possible arrangements of eight queens on an 8×8 board, but only 92 solutions.\n\rThe semantic way to solve this problem is as follows:\n Imagine that we have a robot that can arrange randomly eight queens on a chessboard. But he doesn\u0026rsquo;t know whether the position is the right one or not. Then, after each arrangement, the robot asks us if he placed the queens on the board correctly. If we say that is correct, the robot considers the task completed. And if we say what is wrong, the robot tries to place the queens in a different way. In order to determine whether the queens are placed correctly on the chessboard, we will write semantic rules in the d0sl language. For example: For any two queens on a chessboard, it must be true that they are not on the same diagonal, and they are not on the same line.  def check board(board : ChessBoard) means check all var queens = ChessDSL.get queens(board) for all q1, q2 in queens not ChessDSL.on one line(q1, q2) and not ChessDSL.on one diagonal(q1, q2) end end def  Next, we show how to run the example and see the code.\n\r"
 },
 {
-	"uri": "/en/d0sl/predicate/",
+	"uri": "d0sl.github.io/en/d0sl/predicate/",
 	"title": "Predicate",
 	"tags": [],
 	"description": "",
 	"content": " In mathematical logic, a predicate is commonly understood to be a Boolean-valued function. However, we use the extended notion of a logical type instead of Boolean. And a predicate can return three values: true, false, and none (undefined).\nIf the predicate returns none, you must treat this as an exception. For example, a timeout occurred. none means that the predicate could not calculate true or false.\n\rTo create a predicate within the semantic model, you must type the keyword def. Then the predicate pattern appears. And you can specify the name of the predicate, its arguments, and the body of the predicate, which is a logical expression.\nThe predicate name may contain spaces. Also you can use not only Latin, but also other national alphabets ..\n\rThe predicate pattern is created without arguments. To add an argument, place the cursor inside the parentheses and press Enter or Insert.\n\rThe predicate body can be any logical expression of d0sl language: and, or, not, check all, if, for all. But for simplicity, we advise the body of the predicate to start with the check all instruction. check all instruction is equivalent of and instruction with many arguments each is in new line.\n\rPredicate example def check board(board : ChessBoard) means check all var queens = ChessDSL.get queens(board) for all q1, q2 in queens not ChessDSL.on one line(q1, q2) and not ChessDSL.on one diagonal(q1, q2) end end def  "
 },
 {
-	"uri": "/en/d0sl/",
+	"uri": "d0sl.github.io/en/d0sl/",
 	"title": "d0sl language",
 	"tags": [],
 	"description": "",
 	"content": " Chapter 2 d0sl language   d0sl is a semantic language for writing logical rules (or predicates). d0sl is designed to be as simple as possible, but sufficient to record all logical operations, according to the mathematical theory of semantic modeling. d0sl can be easy extended with domain specific functions and objects. Thus d0sl itself is DSL (domain specific language). For d0sl, a language-level extension mechanism is provided. In other words, you can build DSL hierarchies of languages ​​that are transformed into d0sl and can also be executed by the core of d0sl.   "
 },
 {
-	"uri": "/en/d0sl/logical/",
+	"uri": "d0sl.github.io/en/d0sl/logical/",
 	"title": "Logical operations",
 	"tags": [],
 	"description": "",
 	"content": "   Operation Alias Example of true value Example of false value     and and true and true false and true   or or true or false false or false   not not not false not true   check all check check all true check all false    check all instruction is equivalent of and instruction with many arguments each is in new line. You can use check alias to enter check all instruction.\nFor example, the next expressions are equivalent.\nA and B and C and D  check all A B C D end check  "
 },
 {
-	"uri": "/en/quick/trello/",
+	"uri": "d0sl.github.io/en/quick/trello/",
 	"title": "Trello",
 	"tags": [],
 	"description": "",
 	"content": " Trello sample This example shows how using the semantic model, you can set the rules for moving cards in a Trello board to manage a hypothetical business process.\n\rDownload Trello sample project\r\rSetup project  Extract the archive and open SemanticTrelloBoard folder in MPS as a project(File-\u0026gt;Open-\u0026gt;(select folder in window)). Choose solution on the left pane [s]SemanticTrelloBoard ([s] - icon means that this is solution);\n Right click on it and choose from the popup menu Module Properties -\u0026gt; Java tab -\u0026gt; and click «+» under Libraries section; then choose file SemanticTrelloBoard.jar located in libs folder under SemanticTrelloBoard folder. The window Model Roots will appear, in this window select java_classes from the dropdown list. If you have empty line before line with SemanticTrelloBoard.jar in Libraries section. Then click Apply button and OK button. In the main MPS menu choose Run -\u0026gt; Edit Configurations -\u0026gt; change working directory to SemanticTrelloBoard folder Click Build -\u0026gt; Rebuild project  Configure In predicate \u0026lsquo;start\u0026rsquo; of TrelloBoard semantic model you can see call to domain function TrelloBoard.DLS.start with 4 arguments: app key, delay time in milliseconds, board id, and access_token. This is configuration parameters for TrelloBoardDSL domain model, you may want to change these parameters, if you want to connect this example semantic model with your own trello board. Or just leave those from the example to connect to d0sl example trello board\nHow to get app key and access_token for your own trello board  First, you need to get app key. To do this:  Login to trello Go to https://trello.com/app-key Save your api app key and put it into the first argument  Then you need get access_token. Here is the guide on how to get it here. You can get board id from your board’s URL. For example, d0sl sample’s trello board URL is https://trello.com/b/r0W9zMhZ/d0sl-sample-project, and board id is r0W9zMhZ Delay time means time between updates(calls to the predicate checkBoard in the example semantic model)  The name of predicate should be checkBoard and it\u0026rsquo;s args are standard. DO NOT CHANGE THEM!\n\rRun Just choose Run.. from the popup menu on the TrelloBoard model(Right-click on TrelloBoard -\u0026gt; run \u0026lsquo;Node test\u0026rsquo;)\n"
 },
 {
-	"uri": "/en/d0sl/if/",
+	"uri": "d0sl.github.io/en/d0sl/if/",
 	"title": "If implication",
 	"tags": [],
 	"description": "",
 	"content": " Implication as a if construction in d0sl is false only when the condition is true, and the then part is false. In other words, the implication if(A) then B is an abbreviated entry for the expression not(A) or B.\nUse the if keyword, and the editor will provide you with a template for the if construct.\n\rIf example "
 },
 {
-	"uri": "/en/d0sl/for/",
+	"uri": "d0sl.github.io/en/d0sl/for/",
 	"title": "For all",
 	"tags": [],
 	"description": "",
 	"content": " To create for all logical expression, you must type the keyword for. Then the for all pattern appears.\nThe general form of this logical expression is for all x1, x2... xn in listX Expression(x1,...,xn). It means that for every \u0026lt;x1,..,xn\u0026gt; from a list listX an expression Expression(x1, ..., xn) should be true.\nFor all example To calculate the result, a selection of various \u0026lt;x1...xn\u0026gt; combinations from a certain list is made. If such a selection cannot be made, it is considered that the formula was not calculated and the for all expression returns true. That is, if the list is empty, or of a smaller dimension than the vector \u0026lt;x1...xn\u0026gt;, you will end up with a true, and the formula inside for all will not be calculated.\n\r"
 },
 {
-	"uri": "/en/d0sl/var/",
+	"uri": "d0sl.github.io/en/d0sl/var/",
 	"title": "Variables",
 	"tags": [],
 	"description": "",
 	"content": " You can use local variables inside check all block by entering var keyword.\nThere are important restrictions on the use of variables. First, you cannot change their value after it has been calculated. Secondly, each time the predicate is called, the value of a local variable is calculated only once. That is, if you use the variable reference several times within the predicate, the value will be calculated only when you first use\n\rVariable example # Testing for sin \u0026amp; cos def test() means check all var angle = 35 var cosinus = Math.cos(angle) var sinus = Math.sin(angle) var sum of squares = Math.pow(cosinus, 2) + Math.pow(sinus, 2) # considering the features of the library java.lang.Math # and inaccurate calculations when converting degrees to radians sum of squares \u0026lt;= 1 sum of squares \u0026gt;= 0.999999 end end def  "
 },
 {
-	"uri": "/en/d0sl/domain/",
+	"uri": "d0sl.github.io/en/d0sl/domain/",
 	"title": "Domain model",
 	"tags": [],
 	"description": "",
 	"content": " Domain object Inside the domain model, you can create types using the keyword type, and then to use objects of this type in the arguments of domain functions and semantic predicates.\nDomain function Inside the domain model, you can define domain functions using the keyword fun, and then to use this functions in semantic predicates.\n"
 },
 {
-	"uri": "/en/d0sl/use/",
+	"uri": "d0sl.github.io/en/d0sl/use/",
 	"title": "Use",
 	"tags": [],
 	"description": "",
 	"content": "In Semantic Model the use statement allows you to include other Semantic and Domain models. This means that if you included another semantic model through the use statement, you can call its predicates. Similarly it works with a domain model.\nFor example, below we include AutodromeDSL domain model:\nuse AutodromeDSL from org.d0sl.examples.auto.AutodromeDSL  After that we can call domain functions defined in AutodromeDSL in our Semantic Model like this:\ndef can stop2(car : Car) means check all not AutodromeDSL.wall ahead(car) not AutodromeDSL.road sign(car) AutodromeDSL.car ahead(car) end end def  You can specify the implementation class for the domain model in the from field (for the Semantic Model, this is not necessary). The implementation class needs to be specified only if you want to run the model inside the MPS project.\n\rIf you specified an implementation class, it should be accessible via dependencies in your MPS project. The implementation can be added either through the jar file, or implemented directly in the MPS in a separate solution, as implemented for Chess and Autodrome examples.\n\r"
 },
 {
-	"uri": "/en/d0sl/editor/",
+	"uri": "d0sl.github.io/en/d0sl/editor/",
 	"title": "Editor tips",
 	"tags": [],
 	"description": "",
 	"content": "   Alias Effect     Ctrl+space Code completion   Alt+enter Intentions menu   Ctrl+w Item (incremental) selection   def Creates predicate definition   use Creates use keyword   check Check all keyword   and, or, not Logical operation   \u0026ldquo; \u0026rdquo;\u0026ldquo;, string value   for For all keyword   if Implication (if)   Insert, enter When needs to insert argument for predicates or functions   var Local variable (inside check-all)   fun Creates function in Domain Model   typedef Creates domain type in Domain Model    "
 },
 {
-	"uri": "/en/d0sl/run/",
+	"uri": "d0sl.github.io/en/d0sl/run/",
 	"title": "How to run model in MPS",
 	"tags": [],
 	"description": "",
 	"content": "If you define the predicate start() without parameters in your semantic model, it will be called automatically when you run the model through the context menu in the MPS project.\n\rFor example, the following start() predicate in the example about the Autodrome first sets up obstacles and road signs on the autodrome field, and then starts the graphical user interface by calling the another start domain function.\ndef start() means check all # set walls AutodromeDSL.add wall(5, 1) AutodromeDSL.add wall(5, 14) AutodromeDSL.add wall(10, 8) # set road signs AutodromeDSL.add road sign(4, 5, \u0026quot;south\u0026quot;) AutodromeDSL.add road sign(6, 9, \u0026quot;north\u0026quot;) AutodromeDSL.add road sign(7, 7, \u0026quot;east\u0026quot;) AutodromeDSL.start(10, 500) end end def  "
 },
 {
-	"uri": "/en/categories/",
+	"uri": "d0sl.github.io/en/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/en/credits/",
+	"uri": "d0sl.github.io/en/credits/",
 	"title": "Credits",
 	"tags": [],
 	"description": "",
 	"content": " Contributors Thanks to them  for making Open Source Software a better place !\n.ghContributors{\rdisplay:flex;\rflex-flow: wrap;\ralign-content: flex-start\r}\r.ghContributors  div{\rwidth: 50% ;\rdisplay: inline-flex;\rmargin-bottom: 5px;\r}\r.ghContributors  div label{\rpadding-left: 4px ;\r}\r.ghContributors  div span{\rfont-size: x-small;\rpadding-left: 4px ;\r}\r\r\r@kuruhuru\r20 commits\r\r\r@vitgum\r1 commits\r\r "
 },
 {
-	"uri": "/en/tags/",
+	"uri": "d0sl.github.io/en/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/en/",
+	"uri": "d0sl.github.io/en/",
 	"title": "d0sl semantic language platform",
 	"tags": [],
 	"description": "",
