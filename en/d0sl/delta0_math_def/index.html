@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>If implication :: d0sl Semantic Platform</title>
+    <title> :: d0sl Semantic Platform</title>
 
     
     <link href="/css/nucleus.css?1549943092" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/d0sl/if/">
+  <body class="" data-url="/en/d0sl/delta0_math_def/">
     <nav id="sidebar" class="">
 
 
@@ -378,8 +378,8 @@
   
     
     <li data-nav-id="/en/d0sl/if/" title="If implication" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/en/d0sl/if/">
@@ -564,7 +564,7 @@
  
   
     
-      <li data-nav-id="/en/d0sl/delta0_math_def/" title="" class="dd-item ">
+      <li data-nav-id="/en/d0sl/delta0_math_def/" title="" class="dd-item active">
         <a href="/en/d0sl/delta0_math_def/">
         
         
@@ -775,7 +775,7 @@
                   
                     
                     
-                      <option id="en" value="/en/d0sl/if/" selected>English</option>
+                      <option id="en" value="/en/d0sl/delta0_math_def/" selected>English</option>
                     
                   
               
@@ -847,7 +847,7 @@
             
           
           
-            <a href='/en/'>d0sl</a> > <a href='/en/d0sl/'>d0sl language</a> > If implication
+            <a href='/en/'>d0sl</a> > <a href='/en/d0sl/'>d0sl language</a> > 
           
          
           
@@ -862,16 +862,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#if-example">If example</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
+<li><a href="#mathematical-definition-of-delta-0-formulas">Mathematical definition of \(\Delta_0\)-formulas</a></li>
 </ul>
 </nav>
     </div>
@@ -885,7 +876,7 @@
         
         <div id="body-inner">
           
-            <h1>If implication</h1>
+            <h1></h1>
           
 
         
@@ -893,22 +884,22 @@
 
 
 
-<p>Implication as a <code>if</code> construction in d0sl is <code>false</code> only when the condition is <code>true</code>, and the <code>then</code> part is <code>false</code>. In other words, the implication <code>if(A) then B</code> is an abbreviated entry for the expression <code>not(A) or B</code>.</p>
+<h1 id="mathematical-definition-of-delta-0-formulas">Mathematical definition of \(\Delta_0\)-formulas</h1>
 
-<div class="notices tip" ><p>Use the <code>if</code> keyword, and the editor will provide you with a template for the <code>if</code> construct.</p>
-</div>
+<p><strong>Definition</strong></p>
 
-
-<h4 id="if-example">If example</h4>
-
-<p><img src="if.png" alt="if template" /></p>
-
-<p><img src="if-example.png" alt="if example" /></p>
+<ol>
+<li>If \(P \) is a predicate symbol, \(P \in \sigma \), and \( 𝑡_1,&hellip;,t_n \) are symbols of constants of the signature \(\sigma\), or variables, then \( P(𝑡_1,&hellip;,t_n)\) is a \(\Delta_0 \)-formula.</li>
+<li>If \( \phi \) and \( \psi \) are \( \Delta_0 \)-formulas, then \( \phi \wedge \psi, \phi \vee \psi , \phi \rightarrow \psi, \neg \psi \) are \( \Delta_0 \)-formulas.</li>
+<li>If \( \phi \) is a \( \Delta_0 \)-formula, 𝑥 is a variable, and 𝑙 is a finite list, then \( (\forall x \in l)\phi (x) \) and \( (\exists x \in l)\phi (x) \) are \( \Delta_0 \)-formulas.</li>
+<li>There are no other \( \Delta_0 \)-formulas.</li>
+</ol>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -1111,26 +1102,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -1254,6 +1225,23 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1261,6 +1249,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1364,10 +1355,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/en/d0sl/logical/" title="Logical operations"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/en/d0sl/articles/" title=""> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/en/d0sl/for/" title="For all" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/en/vision/" title="Vision" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1408,3 +1399,4 @@
 </script>
   </body>
 </html>
+

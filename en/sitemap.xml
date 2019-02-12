@@ -23,6 +23,10 @@
   </url>
   
   <url>
+    <loc>/en/vision/problems/</loc>
+  </url>
+  
+  <url>
     <loc>/en/quick/chess/</loc>
     <lastmod>2019-02-01T14:53:57+07:00</lastmod>
   </url>
@@ -40,11 +44,27 @@
   </url>
   
   <url>
+    <loc>/en/vision/semantic_tech/</loc>
+  </url>
+  
+  <url>
     <loc>/en/quick/trello/</loc>
   </url>
   
   <url>
+    <loc>/en/vision/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/glossary/</loc>
+  </url>
+  
+  <url>
     <loc>/en/d0sl/if/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/vision/apps/</loc>
   </url>
   
   <url>
@@ -60,6 +80,10 @@
   </url>
   
   <url>
+    <loc>/en/vision/math/</loc>
+  </url>
+  
+  <url>
     <loc>/en/d0sl/use/</loc>
   </url>
   
@@ -69,6 +93,14 @@
   
   <url>
     <loc>/en/d0sl/run/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/d0sl/articles/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/d0sl/delta0_math_def/</loc>
   </url>
   
   <url>
