@@ -3,151 +3,151 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://d0sl.github.io/en/quick/chess/sample/</loc>
+    <loc>/en/quick/chess/sample/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/quick/</loc>
+    <loc>/en/quick/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/quick/requirements/</loc>
+    <loc>/en/quick/requirements/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/root/</loc>
+    <loc>/en/d0sl/root/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/quick/installation/</loc>
+    <loc>/en/quick/installation/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/vision/problems/</loc>
+    <loc>/en/vision/problems/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/quick/chess/</loc>
+    <loc>/en/quick/chess/</loc>
     <lastmod>2019-02-01T14:53:57+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/predicate/</loc>
+    <loc>/en/d0sl/predicate/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/</loc>
+    <loc>/en/d0sl/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/logical/</loc>
+    <loc>/en/d0sl/logical/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/vision/semantic_tech/</loc>
+    <loc>/en/vision/semantic_tech/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/quick/trello/</loc>
+    <loc>/en/quick/trello/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/vision/</loc>
+    <loc>/en/vision/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/glossary/</loc>
+    <loc>/en/glossary/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/if/</loc>
+    <loc>/en/d0sl/if/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/vision/apps/</loc>
+    <loc>/en/vision/apps/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/for/</loc>
+    <loc>/en/d0sl/for/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/var/</loc>
+    <loc>/en/d0sl/var/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/domain/</loc>
+    <loc>/en/d0sl/domain/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/vision/math/</loc>
+    <loc>/en/vision/math/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/use/</loc>
+    <loc>/en/d0sl/use/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/editor/</loc>
+    <loc>/en/d0sl/editor/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/run/</loc>
+    <loc>/en/d0sl/run/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/articles/</loc>
+    <loc>/en/d0sl/articles/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/d0sl/delta0_math_def/</loc>
+    <loc>/en/d0sl/delta0_math_def/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/categories/</loc>
+    <loc>/en/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://d0sl.github.io/ru/categories/"
+                href="/ru/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://d0sl.github.io/en/categories/"
+                href="/en/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/credits/</loc>
+    <loc>/en/credits/</loc>
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/tags/</loc>
+    <loc>/en/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://d0sl.github.io/ru/tags/"
+                href="/ru/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://d0sl.github.io/en/tags/"
+                href="/en/tags/"
                 />
   </url>
   
   <url>
-    <loc>https://d0sl.github.io/en/</loc>
+    <loc>/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://d0sl.github.io/ru/"
+                href="/ru/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://d0sl.github.io/en/"
+                href="/en/"
                 />
   </url>
   
