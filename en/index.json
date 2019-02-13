@@ -186,7 +186,7 @@
 	"title": "Credits",
 	"tags": [],
 	"description": "",
-	"content": " Contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @kuruhuru   "
+	"content": " Contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @kuruhuru   @vitgum   "
 },
 {
 	"uri": "https://d0sl.github.io/en/tags/",
