@@ -32,7 +32,7 @@
 	"title": "Installation",
 	"tags": [],
 	"description": "",
-	"content": " Install Jetbrains Meta Programming System (MPS) https://www.jetbrains.com/mps/ Clone the repo: git clone https://github.com/kirikprotocol/examples-d0sl In MPS install d0sl plugin from file d0sl_plugin*.zip (choose load plugin from disk option)      Open the project in MPS by choosing the directory cloned (e.g. examples-d0sl directory) Rebuild the project  "
+	"content": " Install Jetbrains Meta Programming System (MPS) https://www.jetbrains.com/mps/ Clone the repo: git clone https://github.com/d0sl/d0SDK  Alternatevely you can download zip  SDK ZIP    In MPS install d0sl plugin from file d0sl_plugin*.zip (choose load plugin from disk option)      Open the project in MPS by choosing the directory cloned (e.g. d0SDK directory) Rebuild the project  "
 },
 {
 	"uri": "https://d0sl.github.io/en/vision/problems/",
@@ -186,7 +186,7 @@
 	"title": "Credits",
 	"tags": [],
 	"description": "",
-	"content": " Contributors Thanks to them  for making Open Source Software a better place !\n.ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @kuruhuru 21 commits   @vitgum 1 commits   "
+	"content": " Contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @kuruhuru   "
 },
 {
 	"uri": "https://d0sl.github.io/en/tags/",
