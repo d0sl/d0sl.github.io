@@ -12,19 +12,19 @@
     <title>d0sl :: d0sl Semantic Platform</title>
 
     
-    <link href="/css/nucleus.css?1550137402" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1550137402" rel="stylesheet">
-    <link href="/css/hybrid.css?1550137402" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1550137402" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1550137402" rel="stylesheet">
-    <link href="/css/auto-complete.css?1550137402" rel="stylesheet">
-    <link href="/css/theme.css?1550137402" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1550137402" rel="stylesheet">
+    <link href="/css/nucleus.css?1550218959" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1550218959" rel="stylesheet">
+    <link href="/css/hybrid.css?1550218959" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1550218959" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1550218959" rel="stylesheet">
+    <link href="/css/auto-complete.css?1550218959" rel="stylesheet">
+    <link href="/css/theme.css?1550218959" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1550218959" rel="stylesheet">
     
-      <link href="/css/theme-red.css?1550137402" rel="stylesheet">
+      <link href="/css/theme-red.css?1550218959" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1550137402"></script>
+    <script src="/js/jquery-2.x.min.js?1550218959"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -89,14 +89,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1550137402"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1550137402"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1550218959"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1550218959"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/d0sl.github.io\/\/en";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1550137402"></script>
+<script type="text/javascript" src="/js/search.js?1550218959"></script>
 
     
   </div>
@@ -846,42 +846,46 @@
  
 
 
-<h2 id="d0sl-delta-0-semantic-language">d0sl: Delta 0 Semantic Language</h2>
+<h2 id="d0sl-delta-zero-semantic-language"><code>d0SL</code>: Delta Zero Semantic Language</h2>
 
-<p><strong>d0sl</strong> is a next step generation of so called Business Rules Engines (BRE). Just like regular BRE&rsquo;s d0sl allows you to implement business logic of you system by using declarative logical specifications language.</p>
+<p><strong><code>d0SL</code></strong> is a next step generation of so called Business Rules Engines (BRE). Just like regular BRE&rsquo;s <code>d0SL</code> allows you to implement business logic of you system by using declarative logical specifications language.</p>
 
-<blockquote>
-<p><em>There are several important advantages over traditional BRE:</em></p>
-
-<p>d0sl has very simple purely logical syntax, which does not require any programming skills from users who use it to specify business logic. Which any one who has basic understanding of logic can start using it in a matter of several hours unlike other BRE, which require significant investment of time to learn and special programming skills to understand and write business rules.</p>
-
-<p>d0sl scales from embedded systems to enterprise level. Its footprint is very lightweight and can be deployed even on embedded systems like Raspberry PI. On the other hand, d0sl can be used on enterprise level (we have carrier grade version of d0sl called Eyeline SDP, which is used by several mobile telcos, banks etc).</p>
-
-<p>d0sl has very clear intuitive semantics for non programmers, because d0sl is based on a pure Delta 0 subset of first order predicate logic and has mathematically proven semantic. Unlike d0sl other BRE&rsquo;s have non clear semantic which makes them much more difficult to use.</p>
-
-<p>d0sl allows to create DSL&rsquo;s (domain specific languages) which can be used to create business rules not only by your employees, but also by your end users.</p>
-
-<p>d0sl provides IDE our of the box, which simplifies creation of logical rules. We supply this in a form of d0sl plugin for JetBrains MPS. This simplifies the creation of semantic logical models because this plugin helps the user to create syntactically correct semantic models.</p>
-
-<p>d0sl allows easy integration with your existing software by implementing integration drivers (so called domain models).</p>
-
-<p>d0sl allows to implement one set of logical rules on top of the other sets of logical rules (a set of logical rules are called semantic model). This allows to increase level of abstraction as much as you need. And this is important for you to create a Domain Specific Language for your users/employees which is easy to learn and easy to use.</p>
-</blockquote>
-
-<p>Main components of d0sl:</p>
+<div class="notices note" ><p>Main components of <code>d0SL</code>:</p>
 
 <ol>
-<li>d0sl language itself</li>
-<li>d0VM &ndash; semantic virtual machine which executes <em>semantic models</em> written in d0sl language</li>
-<li>d0SDK  &ndash; an <em>IDE</em> for creating semantic models, which also includes d0sl examples</li>
-<li>Domain models (or so called drivers) that serves to link the language with external systems, and allow you to define logical rules, using terms of the subject area.</li>
+<li><code>d0SL</code> language itself</li>
+<li><code>d0VM</code> &ndash; semantic virtual machine which executes <em>semantic models</em> written in <code>d0SL</code> language</li>
+<li><code>d0SDK</code>  &ndash; an <em>IDE</em> for creating semantic models, which also includes <code>d0SL</code> examples</li>
+<li><em>Domain models</em> (or so called <em>drivers</em>) which serve to link the semntic models with external systems, and allow you to define logical rules, using terms of the subject area.</li>
 </ol>
-
-<div class="notices note" ><p>We like the word d0sl and we will use it both for the language and for the system as a whole, or even for the components mentioned above. The meaning should be clear from the context , for example, d0sl language, d0sl virtual machine etc.</p>
 </div>
 
 
-<div class="notices tip" ><p>You can think of d0sl as a logical operating system which can execute <em>semantic models</em> written in d0sl language. As any OS d0sl needs <em>drivers</em> to communicate with an environment: such drivers in d0sl are called <strong>domain models</strong>. Another similar analogy is the JDBC drivers, which connect to the database.</p>
+<h3 id="there-are-several-important-advantages-over-traditional-bre">There are several important advantages over traditional BRE:</h3>
+
+<blockquote>
+<ol>
+<li><p><code>d0SL</code> has very simple purely logical syntax, which does not require any programming skills from users who use it to specify business logic. Which any one who has basic understanding of logic can start using it in a matter of several hours unlike other BRE, which require significant investment of time to learn and special programming skills to understand and write business rules.</p></li>
+
+<li><p><code>d0SL</code> scales from embedded systems to enterprise level. Its footprint is very lightweight and can be deployed even on embedded systems like Raspberry PI. On the other hand, <code>d0SL</code> can be used on enterprise level (we have carrier grade version of <code>d0SL</code> called Eyeline SDP, which is used by several mobile telcos, banks etc).</p></li>
+
+<li><p><code>d0SL</code> has very clear intuitive semantics for non programmers, because <code>d0SL</code> is based on a pure Delta 0 subset of first order predicate logic and has mathematically proven semantic. Unlike <code>d0SL</code> other BRE&rsquo;s have non clear semantic which makes them much more difficult to use.</p></li>
+
+<li><p><code>d0SL</code> allows to create DSL&rsquo;s (domain specific languages) which can be used to create business rules not only by your employees, but also by your end users.</p></li>
+
+<li><p><code>d0SL</code> provides IDE our of the box, which simplifies creation of logical rules. We supply this in a form of <code>d0SL</code> plugin for JetBrains MPS. This simplifies the creation of semantic logical models because this plugin helps the user to create syntactically correct semantic models.</p></li>
+
+<li><p><code>d0SL</code> allows easy integration with your existing software by implementing integration drivers (so called domain models).</p></li>
+
+<li><p><code>d0SL</code> allows to implement one set of logical rules on top of the other sets of logical rules (a set of logical rules are called semantic model). This allows to increase level of abstraction as much as you need. And this is important for you to create a Domain Specific Language for your users/employees which is easy to learn and easy to use.</p></li>
+</ol>
+</blockquote>
+
+<div class="notices note" ><p>We like the word <code>d0SL</code> and we will use it both for the language and for the system as a whole, or even for the components mentioned above. The meaning should be clear from the context , for example, <code>d0SL</code> language, <code>d0SL</code> virtual machine etc.</p>
+</div>
+
+
+<div class="notices tip" ><p>You can think of <code>d0SL</code> as a logical operating system which can execute <em>semantic models</em> written in <code>d0SL</code> language. As any OS <code>d0SL</code> needs <em>drivers</em> to communicate with an environment: such drivers in <code>d0SL</code> are called <strong>domain models</strong>. Another similar analogy is the JDBC drivers, which connect to the database.</p>
 </div>
 
 
@@ -891,7 +895,7 @@
         <span>
         
     	
-    	How d0sl can save humanity from robots rebellion?
+    	How `d0SL` can save humanity from robots rebellion?
     	
     	</span>
     </div>
@@ -921,7 +925,7 @@
 
 <p>Who is responsible for robots? Who controls them if programmers and datasсientists cannot understand the algorithms by which artifitial intelligince operates?</p>
 
-<div class="notices tip" ><p>d0sl technology can be embedded in AI, IoT, autonomous systems of any complexity. In this case, it becomes possible to determine the logical rules of the behavior of such systems in a clear language of human logic. For example, so can be implemented the three Laws of Robotics.</p>
+<div class="notices tip" ><p><code>d0SL</code> technology can be embedded in AI, IoT, autonomous systems of any complexity. In this case, it becomes possible to determine the logical rules of the behavior of such systems in a clear language of human logic. For example, so can be implemented the three Laws of Robotics.</p>
 </div>
 
     </div>
@@ -1385,20 +1389,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1550137402"></script>
-    <script src="/js/perfect-scrollbar.min.js?1550137402"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1550137402"></script>
-    <script src="/js/jquery.sticky.js?1550137402"></script>
-    <script src="/js/featherlight.min.js?1550137402"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1550137402"></script>
-    <script src="/js/highlight.pack.js?1550137402"></script>
+    <script src="/js/clipboard.min.js?1550218959"></script>
+    <script src="/js/perfect-scrollbar.min.js?1550218959"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1550218959"></script>
+    <script src="/js/jquery.sticky.js?1550218959"></script>
+    <script src="/js/featherlight.min.js?1550218959"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1550218959"></script>
+    <script src="/js/highlight.pack.js?1550218959"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1550137402"></script>
-    <script src="/js/learn.js?1550137402"></script>
-    <script src="/js/hugo-learn.js?1550137402"></script>
+    <script src="/js/modernizr.custom.71422.js?1550218959"></script>
+    <script src="/js/learn.js?1550218959"></script>
+    <script src="/js/hugo-learn.js?1550218959"></script>
 
-    <link href="/mermaid/mermaid.css?1550137402" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1550137402"></script>
+    <link href="/mermaid/mermaid.css?1550218959" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1550218959"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
