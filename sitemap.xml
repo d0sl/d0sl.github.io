@@ -2,70 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://d0sl.org/en/getting-started/chess/sample/</loc>
+    <loc>https://d0sl.org/getting-started/chess/sample/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/getting-started/requirements/</loc>
+    <loc>https://d0sl.org/getting-started/requirements/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/d0sl-language/root/</loc>
+    <loc>https://d0sl.org/d0sl-language/root/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/getting-started/installation/</loc>
+    <loc>https://d0sl.org/getting-started/installation/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/vision/problems/</loc>
+    <loc>https://d0sl.org/vision/problems/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/getting-started/chess/</loc>
+    <loc>https://d0sl.org/getting-started/chess/</loc>
     <lastmod>2019-02-01T14:53:57+07:00</lastmod>
   </url><url>
-    <loc>https://d0sl.org/en/d0sl-language/predicate/</loc>
+    <loc>https://d0sl.org/d0sl-language/predicate/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/d0sl-language/logical/</loc>
+    <loc>https://d0sl.org/d0sl-language/logical/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/vision/semantic_tech/</loc>
+    <loc>https://d0sl.org/vision/semantic_tech/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/d0sl-language/if/</loc>
+    <loc>https://d0sl.org/d0sl-language/if/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/vision/apps/</loc>
+    <loc>https://d0sl.org/vision/apps/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/vision/contract/</loc>
+    <loc>https://d0sl.org/vision/contract/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/d0sl-language/for/</loc>
+    <loc>https://d0sl.org/d0sl-language/for/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/d0sl-language/var/</loc>
+    <loc>https://d0sl.org/d0sl-language/var/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/d0sl-language/domain/</loc>
+    <loc>https://d0sl.org/d0sl-language/domain/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/d0sl-language/use/</loc>
+    <loc>https://d0sl.org/d0sl-language/use/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/d0sl-language/editor/</loc>
+    <loc>https://d0sl.org/d0sl-language/editor/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/d0sl-language/run/</loc>
+    <loc>https://d0sl.org/d0sl-language/run/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/</loc>
+    <loc>https://d0sl.org/</loc>
     <lastmod>2019-02-01T14:53:57+07:00</lastmod>
   </url><url>
-    <loc>https://d0sl.org/en/getting-started/</loc>
+    <loc>https://d0sl.org/getting-started/</loc>
     <lastmod>2018-12-29T11:02:05+06:00</lastmod>
   </url><url>
-    <loc>https://d0sl.org/en/d0sl-language/</loc>
+    <loc>https://d0sl.org/d0sl-language/</loc>
     <lastmod>2018-12-28T11:02:05+06:00</lastmod>
   </url><url>
-    <loc>https://d0sl.org/en/vision/</loc>
+    <loc>https://d0sl.org/vision/</loc>
     <lastmod>2018-12-28T11:02:05+06:00</lastmod>
   </url><url>
-    <loc>https://d0sl.org/en/math-foundation/</loc>
+    <loc>https://d0sl.org/math-foundation/</loc>
     <lastmod>2018-12-28T11:02:05+07:00</lastmod>
   </url><url>
-    <loc>https://d0sl.org/en/math-foundation/articles/</loc>
+    <loc>https://d0sl.org/math-foundation/articles/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/math-foundation/delta0_math_def/</loc>
+    <loc>https://d0sl.org/math-foundation/delta0_math_def/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/categories/</loc>
+    <loc>https://d0sl.org/categories/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/changelog/</loc>
+    <loc>https://d0sl.org/changelog/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/contact/</loc>
+    <loc>https://d0sl.org/contact/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/search/</loc>
+    <loc>https://d0sl.org/search/</loc>
   </url><url>
-    <loc>https://d0sl.org/en/tags/</loc>
+    <loc>https://d0sl.org/tags/</loc>
   </url>
 </urlset>
